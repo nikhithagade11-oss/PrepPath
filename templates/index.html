@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrepPath - Placement Tracker</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <h1>Welcome to PrepPath!</h1>
+    <p>Your Placement Preparation Tracker is running.</p>
+
+    <h2>Dashboard</h2>
+
+    <div id="dashboard">
+        <p>Total Tasks: <span id="total">0</span></p>
+        <p>Completed Tasks: <span id="completed">0</span></p>
+        <p>Companies: <span id="companies">0</span></p>
+        <p>Progress: <span id="progress">0</span>%</p>
+    </div>
+
+<h2>My Placement Tasks</h2>
+
+<div class="task-form">
+    <h3>Add New Task</h3>
+
+    <label>Category:</label>
+    <select id="category">
+        <option value="Aptitude">Aptitude</option>
+        <option value="Coding">Coding</option>
+        <option value="Interview">Interview</option>
+    </select>
+
+    <label>Task Title:</label>
+    <input type="text" id="taskTitle"
+           placeholder="Enter your task">
+
+    <label>Difficulty:</label>
+    <select id="difficulty">
+        <option value="Easy">Easy</option>
+        <option value="Medium">Medium</option>
+        <option value="Hard">Hard</option>
+    </select>
+
+    <button onclick="addTask()">Add Task</button>
+</div>
+
+<h3>My Task List</h3>
+<div id="taskList"></div>
+
+<h2>Company Tracker</h2>
+
+<div class="company-form">
+    <h3>Add New Company</h3>
+
+    <label>Company Name:</label>
+    <input type="text" id="companyName"
+           placeholder="Enter company name">
+
+    <label>Job Role:</label>
+    <input type="text" id="companyRole"
+           placeholder="Enter job role">
+
+    <label>Application Status:</label>
+    <select id="companyStatus">
+        <option value="Applied">Applied</option>
+        <option value="Assessment">Assessment</option>
+        <option value="Interview">Interview</option>
+        <option value="Selected">Selected</option>
+        <option value="Rejected">Rejected</option>
+    </select>
+
+    <button type="button" onclick="addCompany()">
+        Add Company
+    </button>
+</div>
+
+<h3>My Companies</h3>
+<div id="companyList"></div>
+
+
+
+    <script src="/static/script.js"></script>
+
+</body>
+</html>
